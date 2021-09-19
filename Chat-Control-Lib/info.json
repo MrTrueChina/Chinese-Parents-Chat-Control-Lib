@@ -1,12 +1,8 @@
 {
-    "Id": "MtC.Mod.ChineseParents.Yuri",
-    "DisplayName": "百合 - Yuri",
+    "Id": "MtC.Mod.ChineseParents.ChatControlLib",
+    "DisplayName": "对话控制前置 - Chat Control Lib",
     "Author": "Mr.true.China",
     "Version": "1.0.0",
-    "LoadAfter": [
-        "MtC.Mod.ChineseParents.ForceGirl",
-        "MtC.Mod.ChineseParent.RemoveDateAlert"
-    ],
-    "AssemblyName": "Yuri.dll",
-    "EntryMethod": "MtC.Mod.ChineseParents.Yuri.Main.Load"
+    "AssemblyName": "Chat-Control-Lib.dll",
+    "EntryMethod": "MtC.Mod.ChineseParents.ChatControlLib.Main.Load"
 }

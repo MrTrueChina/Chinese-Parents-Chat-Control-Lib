@@ -402,6 +402,31 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         LOVING_MUWEI_CANT_TALK = 8200901,
     }
 
+    /// <summary>
+    /// 这个 Mod 的设置
+    /// </summary>
+    public class Settings : UnityModManager.ModSettings, IDrawable
+    {
+
+        [Draw("在游戏内显示发起对话方法被调用的提示 - Show Start Chat Method Run In Game")]
+        public bool showStartChatTip = false;
+
+        [Draw("输出发起对话方法被调用的 Log - Print Start Chat Method Run To Log")]
+        public bool printStartChatLog = false;
+
+        [Draw("输出对话数据的 Log - Print Chat Data To Log")]
+        public bool printChatDataLog = false;
+
+        public override void Save(UnityModManager.ModEntry modEntry)
+        {
+            Save(this, modEntry);
+        }
+
+        public void OnChange()
+        {
+        }
+    }
+
     public static class Main
     {
         /// <summary>
@@ -415,23 +440,20 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         public static bool enabled;
 
         /// <summary>
-        /// 是否在游戏内显示发起对话方法被调用的提示
+        /// 这个 Mod 的设置
         /// </summary>
-        public static bool showStartChatTip = false;
-        /// <summary>
-        /// 是否输出发起对话方法被调用的 Log
-        /// </summary>
-        public static bool printStartChatLog = false;
-        /// <summary>
-        /// 是否输出对话数据的 Log
-        /// </summary>
-        public static bool printChatDataLog = false;
+        public static Settings settings;
 
         public static bool Load(UnityModManager.ModEntry modEntry)
         {
-            // 保存 Mod 对象
+            // 读取设置
+            settings = Settings.Load<Settings>(modEntry);
+
+            // 保存 Mod 对象并绑定事件
             ModEntry = modEntry;
             ModEntry.OnToggle = OnToggle;
+            ModEntry.OnGUI = OnGUI;
+            ModEntry.OnSaveGUI = OnSaveGUI;
 
             // 加载 Harmony
             var harmony = new Harmony(modEntry.Info.Id);
@@ -457,6 +479,16 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             // 返回 true 表示这个 Mod 切换到 Mod Manager 切换的状态，返回 false 表示 Mod 依然保持原来的状态
             return true;
         }
+
+        static void OnGUI(UnityModManager.ModEntry modEntry)
+        {
+            settings.Draw(modEntry);
+        }
+
+        static void OnSaveGUI(UnityModManager.ModEntry modEntry)
+        {
+            settings.Save(modEntry);
+        }
     }
 
     ////////--------////////--------//////// 辅助测试功能 ////////--------////////--------////////
@@ -476,19 +508,19 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             }
 
             // 在需要的情况下显示发起对话方法调用提示
-            if (Main.showStartChatTip)
+            if (Main.settings.showStartChatTip)
             {
                 TipsManager.instance.AddTips("ID 为 " + id + " 的对话即将开始", 1);
             }
 
             // 在需要的情况下将发起对话方法调用输出到 Log
-            if (Main.printStartChatLog)
+            if (Main.settings.printStartChatLog)
             {
                 Main.ModEntry.Logger.Log("ID 为 " + id + " 的对话即将开始");
             }
 
             // 在需要的情况下将对话数据输出到 Log
-            if (Main.printChatDataLog)
+            if (Main.settings.printChatDataLog)
             {
                 PrintChatData(id);
             }
