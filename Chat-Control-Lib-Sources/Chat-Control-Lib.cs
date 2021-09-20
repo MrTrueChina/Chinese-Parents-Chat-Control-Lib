@@ -119,7 +119,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// </summary>
         SATISFACTION_GOOD_8 = 508001,
         /// <summary>
-        /// 高满意度事件对话
+        /// 高满意度事件对话（带你去吃好吃的）
         /// </summary>
         SATISFACTION_GOOD_9 = 509001,
         /// <summary>
@@ -131,7 +131,6 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 低压力事件对话
         /// </summary>
         PRESSURE_GOOD_2 = 512001,
-
         /// <summary>
         /// 低压力事件对话（内心平稳）
         /// </summary>
@@ -143,6 +142,13 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 考试结果为优的对话
         /// </summary>
         EXAMINATION_EXCELLENT = 840004,
+
+        ////----////----//// 抽奖 ////----////----////
+
+        /// <summary>
+        /// 抽奖-没中的对话
+        /// </summary>
+        LUCK_DRAW_0 = 80004,
 
         ////----////----//// 选秀 ////----////----////
 
@@ -219,6 +225,10 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 学习-学会-语文-学会语文作文后的对话
         /// </summary>
         SKILL_STUDY_CHINESE_CHINESE_COMPOSITION = 80300041,
+        /// <summary>
+        /// 学习-学会-语文-学会写小说后的对话
+        /// </summary>
+        SKILL_STUDY_CHINESE_NOVEL = 80300051,
 
         //// 数学线 ////
 
@@ -237,6 +247,10 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 学习-学会-英语-学会英语单词后的对话
         /// </summary>
         SKILL_STUDY_ENGLISH_ENGLISH_WORDS = 80500021,
+        /// <summary>
+        /// 学习-学会-英语-学会英语听力后的对话（东北大碴子味
+        /// </summary>
+        SKILL_STUDY_ENGLISH_ENGLISH_LISTENING = 80500051,
 
         //// 文综线 ////
 
@@ -248,6 +262,10 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 学习-学会-文综-学会世界地理后的对话
         /// </summary>
         SKILL_STUDY_INTEGRATED_WORLD_GEOGRAPHY = 80600071,
+        /// <summary>
+        /// 学习-学会-文综-学会经济常识后的对话（郁金香泡沫）
+        /// </summary>
+        SKILL_STUDY_INTEGRATED_ECONOMIC_KNOWLEDGE = 80600101,
 
         //// 理综线 ////
 
@@ -259,6 +277,44 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 学习-学会-理综-学会模型常识后的对话
         /// </summary>
         SKILL_STUDY_SCIENCE_MODEL_KNOWLEDGE = 80700051,
+        /// <summary>
+        /// 学习-学会-理综-学会初中生物后的对话（21世纪是____的世纪）
+        /// </summary>
+        SKILL_STUDY_SCIENCE_JUNIOR_MIDDLE_SCHOOL_BIOLOGY = 80700081,
+
+        //// 体育线 ////
+
+        /// <summary>
+        /// 学习-事件-体育-学会体能训练技能后出现的事件的对话
+        /// </summary>
+        SKILL_STUDY_PE_PHYSICAL_TRAINING = 80800051,
+        /// <summary>
+        /// 学习-事件-体育-学会校队训练技能后出现的事件的对话
+        /// </summary>
+        SKILL_STUDY_PE_SCHOOL_TEAM_TRAINING = 80800061,
+        /// <summary>
+        /// 学习-事件-体育-学会中学篮球集训技能后出现的事件的对话
+        /// </summary>
+        SKILL_STUDY_PE_MIDDLE_SCHOOL_BASKETBALL_TRAINING = 80800071,
+        /// <summary>
+        /// 学习-事件-体育-学会美式特训技能后出现的事件的对话
+        /// </summary>
+        SKILL_STUDY_PE_AMERICAN_SPECIAL_TRAINING = 80800081,
+        /// <summary>
+        /// 学习-事件-体育-学会专业篮球特训技能后出现的事件的对话
+        /// </summary>
+        SKILL_STUDY_PE_PROFESSIONAL_BASKETBALL = 80800091,
+        /// <summary>
+        /// 学习-事件-体育-学会国青队集训技能后出现的事件的对话
+        /// </summary>
+        SKILL_STUDY_PE_NATIONAL_YOUTH_TEAM_TRAINING = 80800101,
+
+        //// 艺术线 ////
+
+        /// <summary>
+        /// 学习-事件-艺术-学会色彩技能后出现的事件的对话
+        /// </summary>
+        SKILL_STUDY_ART_COLOR = 80900051,
 
         //// 编程线 ////
 
@@ -270,6 +326,13 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 学习-学会-计算机-学会超文本后的对话
         /// </summary>
         SKILL_STUDY_COMPUTER_HYPERTEXT = 81200021,
+
+        //// 正义线 ////
+
+        /// <summary>
+        /// 学习-学会-正义-学会跆拳道后的对话
+        /// </summary>
+        SKILL_STUDY_JUSTICE_TAEKWONDO = 81100011,
 
         ////----//// 学会技能后出现的事件的对话 ////----////
 
@@ -287,6 +350,22 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 学习-事件-体育-学会仰卧起坐技能后出现的事件的对话
         /// </summary>
         SKILL_EVENT_PE_ABDOMINAL_CURL = 70100301,
+        /// <summary>
+        /// 学习-事件-体育-学会仰卧起坐技能并且上一个事件出现过后出现的事件的对话
+        /// </summary>
+        SKILL_EVENT_PE_ABDOMINAL_CURL_2 = 70100311,
+        /// <summary>
+        /// 学习-事件-体育-学会投篮技能后出现的事件的对话
+        /// </summary>
+        SKILL_EVENT_PE_SHOOT = 70100401,
+        /// <summary>
+        /// 学习-事件-体育-学会投篮技能后出现的事件的对话
+        /// </summary>
+        SKILL_EVENT_PE_SHOOT_2 = 70100421,
+        /// <summary>
+        /// 学习-事件-体育-学会美式特训技能后出现的事件的对话
+        /// </summary>
+        SKILL_EVENT_PE_AMERICAN_SPECIAL_TRAINING = 70100501,
 
         //// 艺术线 ////
 
@@ -306,6 +385,10 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 学习-事件-艺术-学会素描技能后出现的事件的对话
         /// </summary>
         SKILL_EVENT_ART_SKETCH = 70200401,
+        /// <summary>
+        /// 学习-事件-艺术-学会色彩技能后出现的事件的对话
+        /// </summary>
+        SKILL_EVENT_ART_COLOR = 70200501,
 
         //// 编程线 ////
 
@@ -318,8 +401,19 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// </summary>
         SKILL_EVENT_COMPUTER_HYPERTEXT = 70400201,
 
+        //// 正义线 ////
+
+        /// <summary>
+        /// 学习-学会-正义-学会跆拳道后的对话
+        /// </summary>
+        SKILL_EVENT_JUSTICE_TAEKWONDO = 70300101,
+        /// <summary>
+        /// 学习-学会-正义-学会跆拳道后的第二个对话
+        /// </summary>
+        SKILL_EVENT_JUSTICE_TAEKWONDO_2 = 70300111,
+
         ////----////----//// 社交 ////----////----////
-        
+
         /// <summary>
         /// 社交-旁白君-好感度增加
         /// </summary>
