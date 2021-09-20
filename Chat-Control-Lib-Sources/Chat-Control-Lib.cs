@@ -494,6 +494,13 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 社交-牧唯-不符合对话条件
         /// </summary>
         LOVING_MUWEI_CANT_TALK = 8200901,
+
+        ////----//// 闺蜜-萌萌 ////----////
+        
+        /// <summary>
+        /// 闺蜜长时间不陪伴隐藏剧情
+        /// </summary>
+        LOVING_MENGMENG_NO_COMPANY = 8200101
     }
 
     /// <summary>
