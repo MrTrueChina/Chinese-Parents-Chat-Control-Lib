@@ -202,6 +202,23 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             // 添加修改方法到列表里
             modifyChats[chatId].Add(modify);
         }
+
+        /// <summary>
+        /// 取消修改指定的对话
+        /// </summary>
+        /// <param name="chatId">要取消修改的对话的 ID</param>
+        /// <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)</param>
+        public static void RemoveModifyChat(int chatId, Func<ChatData, ChatData, ChatData> modify)
+        {
+            // 如果没有修改这个 ID 对话的方法则先创建列表
+            if (!modifyChats.ContainsKey(chatId))
+            {
+                modifyChats.Add(chatId, new List<Func<ChatData, ChatData, ChatData>>());
+            }
+
+            // 添加修改方法到列表里
+            modifyChats[chatId].Add(modify);
+        }
     }
 
     /// <summary>
