@@ -139,7 +139,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 输出对话数据的方法，用于辅助测试
         /// </summary>
         /// <param name="id"></param>
-        private static void PrintChatData(int id)
+        internal static void PrintChatData(int id)
         {
             Main.ModEntry.Logger.Log("输出对话数据：id = " + id);
 
