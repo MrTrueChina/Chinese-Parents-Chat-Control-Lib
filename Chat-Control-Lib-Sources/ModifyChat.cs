@@ -98,6 +98,8 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             /// </summary>
             public int effect = 0;
 
+            public ChatData() { }
+
             public ChatData(XmlData chatData)
             {
                 id = chatData.GetInt("id");
@@ -122,6 +124,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 shake = chatData.GetInt("shake");
                 effect = chatData.GetInt("effect");
             }
+
             //public ChatData()
             //{
             //    this.id = chatData.GetInt("id");
@@ -146,6 +149,39 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             //    this.shake = chatData.GetInt("shake");
             //    this.effect = chatData.GetInt("effect");
             //}
+
+            /// <summary>
+            /// 复制一个新的 <see cref="ChatData"/>
+            /// </summary>
+            /// <returns></returns>
+            public ChatData Copy()
+            {
+                ChatData newChatData = new ChatData();
+
+                newChatData.id = id;
+                newChatData.name = name;
+                newChatData.type = type;
+                newChatData.next_id = next_id;
+                newChatData.next_id_girl = next_id_girl;
+                newChatData.text = text;
+                newChatData.text_id = text_id;
+                newChatData.text_girl = text_girl;
+                newChatData.text_girl_id = text_girl_id;
+                newChatData.add_task = add_task;
+                newChatData.player = player;
+                newChatData.player_id = player_id;
+                newChatData.image = image;
+                newChatData.add_task_girl = add_task_girl;
+                newChatData.player_girl = player_girl;
+                newChatData.player_girl_id = player_girl_id;
+                newChatData.image_girl = image_girl;
+                newChatData.loving_effect = loving_effect;
+                newChatData.graph = graph;
+                newChatData.shake = shake;
+                newChatData.effect = effect;
+
+                return newChatData;
+            }
 
             /// <summary>
             /// 返回这个对话数据的 <see cref="XmlData"/> 版
