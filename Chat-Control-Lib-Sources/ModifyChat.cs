@@ -212,6 +212,11 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         }
 
         /// <summary>
+        /// 没有文本的文本 ID
+        /// </summary>
+        public const int NO_TEXT_ID = 2010001;
+
+        /// <summary>
         /// 优先处理方法列表，这个列表中的方法将会优先于修改对话对【每一条】对话进行处理，参数格式与修改对话的方法一致
         /// </summary>
         internal static List<Func<ChatData, ChatData, ChatData>> beforeModify = new List<Func<ChatData, ChatData, ChatData>>();
@@ -219,6 +224,10 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 需要修改的对话的列表，委托的格式是 处理后的对话数据 Func(原逻辑的对话数据, 经过前面的委托处理后的对话数据)
         /// </summary>
         internal static Dictionary<int, List<Func<ChatData, ChatData, ChatData>>> modifyChats = new Dictionary<int, List<Func<ChatData, ChatData, ChatData>>>();
+        /// <summary>
+        /// 文本 id 到对话 id 的映射表，儿子女儿文本共用
+        /// </summary>
+        internal static Dictionary<int, int> textIdToChatId = new Dictionary<int, int>();
 
         /// <summary>
         /// 对所有对话进行修改，在指定修改之前进行
@@ -340,6 +349,16 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
 
             // 用编辑后的对话数据替换原来的对话数据
             __result = modifiedChatData.ToXmlData();
+
+            // 记录文本 id 到对话 id 的映射。如果是无文本 id 则不记录，如果已有文本 id 的映射也不改变，理论上只要思路上没有出现问题应该不会有人给不同的对话安排相同的文本 id
+            if (!ChatControl.textIdToChatId.ContainsKey(modifiedChatData.text_id) && modifiedChatData.text_id != ChatControl.NO_TEXT_ID)
+            {
+                ChatControl.textIdToChatId.Add(modifiedChatData.text_id, __state.id);
+            }
+            if (!ChatControl.textIdToChatId.ContainsKey(modifiedChatData.text_girl_id) && modifiedChatData.text_girl_id != ChatControl.NO_TEXT_ID)
+            {
+                ChatControl.textIdToChatId.Add(modifiedChatData.text_girl_id, __state.id);
+            }
         }
     }
 
@@ -384,38 +403,42 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 return;
             }
 
-            // 遍历所有修改的对话，找出当前获取的文本属于的对话，对默认值的判断可能出现偏差，手动记录是否找到使用了文本的对话
-            XmlData targetChatData = default(XmlData);
-            bool haveTargetData = false;
-            foreach(KeyValuePair<int, List<Func<ChatControl.ChatData, ChatControl.ChatData, ChatControl.ChatData>>> modifyChat in ChatControl.modifyChats)
+            // 通过映射表获取对话 id
+            int chatId = int.MinValue;
+            if (ChatControl.textIdToChatId.ContainsKey(__instance.GetInt("text_id")))
             {
-                XmlData chatData = ReadXml.GetData("chat", modifyChat.Key);
-
-                // 如果是儿子版并且当前要修改的对话的儿子版文本 id 等于要获取的文本的 id 则这个对话就是目标对话，女儿版则是比较女儿版文本 id
-                if ((record_manager.InstanceManagerRecord.IsBoy() && chatData.GetInt("text_id") == __instance.GetInt("text_id"))
-                    || (!record_manager.InstanceManagerRecord.IsBoy() && chatData.GetInt("text_girl_id") == __instance.GetInt("text_girl_id")))
-                {
-                    Main.ModEntry.Logger.Log("发现使用了 id 为 " + __instance.GetInt("text_girl_id") + " 的对话，对话 id = " + modifyChat.Key);
-                    targetChatData = chatData;
-                    haveTargetData = true;
-                    break;
-                }
+                chatId = ChatControl.textIdToChatId[__instance.GetInt("text_id")];
+                Main.ModEntry.Logger.Log("发现使用了 id 为 " + __instance.GetInt("text_id") + " 的对话，对话 id = " + chatId);
+            }
+            else if (ChatControl.textIdToChatId.ContainsKey(__instance.GetInt("text_girl_id")))
+            {
+                chatId = ChatControl.textIdToChatId[__instance.GetInt("text_girl_id")];
+                Main.ModEntry.Logger.Log("发现使用了 id 为 " + __instance.GetInt("text_girl_id") + " 的对话，对话 id = " + chatId);
             }
 
             // 如果没找到这个文本所属的对话，则说明这个文本所属的对话并不需要修改，那么这个文本也不作处理
-            if(!haveTargetData)
+            if(chatId == int.MinValue)
             {
                 return;
             }
 
+            // 如果不使用旧版文本，而且这个文本不是针对性修改的文本，不作处理
+            if(!Main.settings.useOldChatText && !ChatControl.modifyChats.ContainsKey(chatId))
+            {
+                return;
+            }
+
+            // 获取对话内容
+            XmlData chatData = ReadXml.GetData("chat", chatId);
+
             // 根据性别修改返回值为对话文本
             if (record_manager.InstanceManagerRecord.IsBoy())
             {
-                __result = targetChatData.GetString("text");
+                __result = chatData.GetString("text");
             }
             else
             {
-                __result = targetChatData.GetString("text_girl");
+                __result = chatData.GetString("text_girl");
             }
         }
     }

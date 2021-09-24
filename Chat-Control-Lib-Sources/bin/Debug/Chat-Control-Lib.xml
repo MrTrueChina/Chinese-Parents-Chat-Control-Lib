@@ -1175,6 +1175,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.NO_TEXT_ID">
+            <summary>
+            没有文本的文本 ID
+            </summary>
+        </member>
         <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.beforeModify">
             <summary>
             优先处理方法列表，这个列表中的方法将会优先于修改对话对【每一条】对话进行处理，参数格式与修改对话的方法一致
@@ -1183,6 +1188,11 @@
         <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.modifyChats">
             <summary>
             需要修改的对话的列表，委托的格式是 处理后的对话数据 Func(原逻辑的对话数据, 经过前面的委托处理后的对话数据)
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.textIdToChatId">
+            <summary>
+            文本 id 到对话 id 的映射表，儿子女儿文本共用
             </summary>
         </member>
         <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.BeforeModifyChat(System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
