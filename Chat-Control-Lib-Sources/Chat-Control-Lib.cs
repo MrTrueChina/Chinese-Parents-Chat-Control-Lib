@@ -16,13 +16,19 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
     /// </summary>
     public class Settings : UnityModManager.ModSettings, IDrawable
     {
-
+        /// <summary>
+        /// 是否在游戏内显示发起对话方法被调用的提示
+        /// </summary>
         [Draw("在游戏内显示发起对话方法被调用的提示 - Show Start Chat Method Run In Game")]
         public bool showStartChatTip = false;
-
+        /// <summary>
+        /// 是否输出发起对话方法被调用的
+        /// </summary>
         [Draw("输出发起对话方法被调用的 Log - Print Start Chat Method Run To Log")]
         public bool printStartChatLog = false;
-
+        /// <summary>
+        /// 是否输出对话数据的
+        /// </summary>
         [Draw("输出对话数据的 Log - Print Chat Data To Log")]
         public bool printChatDataLog = false;
 

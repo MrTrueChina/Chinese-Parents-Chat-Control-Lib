@@ -329,6 +329,21 @@
             这个 Mod 的设置
             </summary>
         </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.Settings.showStartChatTip">
+            <summary>
+            是否在游戏内显示发起对话方法被调用的提示
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.Settings.printStartChatLog">
+            <summary>
+            是否输出发起对话方法被调用的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.Settings.printChatDataLog">
+            <summary>
+            是否输出对话数据的
+            </summary>
+        </member>
         <member name="P:MtC.Mod.ChineseParents.ChatControlLib.Main.ModEntry">
             <summary>
             Mod 对象
