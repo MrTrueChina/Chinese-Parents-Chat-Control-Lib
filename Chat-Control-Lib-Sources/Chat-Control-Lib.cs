@@ -17,6 +17,11 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
     public class Settings : UnityModManager.ModSettings, IDrawable
     {
         /// <summary>
+        /// 是否使用旧版对话文本
+        /// </summary>
+        [Draw("使用旧版对话文本 - Use Old Chat Text")]
+        public bool useOldChatText = false;
+        /// <summary>
         /// 是否在游戏内显示发起对话方法被调用的提示
         /// </summary>
         [Draw("在游戏内显示发起对话方法被调用的提示 - Show Start Chat Method Run In Game")]

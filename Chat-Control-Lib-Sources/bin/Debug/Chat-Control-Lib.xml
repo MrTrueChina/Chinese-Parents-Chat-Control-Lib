@@ -329,6 +329,11 @@
             这个 Mod 的设置
             </summary>
         </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.Settings.useOldChatText">
+            <summary>
+            是否使用旧版对话文本
+            </summary>
+        </member>
         <member name="F:MtC.Mod.ChineseParents.ChatControlLib.Settings.showStartChatTip">
             <summary>
             是否在游戏内显示发起对话方法被调用的提示
