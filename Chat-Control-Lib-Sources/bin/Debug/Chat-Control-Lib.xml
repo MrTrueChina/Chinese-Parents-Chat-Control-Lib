@@ -1,0 +1,1215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chat-Control-Lib</name>
+    </assembly>
+    <members>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs">
+            <summary>
+            背景图片记录，不保证完全，不保证更新
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool">
+            <summary>
+            学校内部的背景图
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.ClassRoom">
+            <summary>
+            教室
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.ClassRoom.LITTLE_SCHOOL_CLASS_ROOM_OUT_OF_WINDOW">
+            <summary>
+            从窗外俯视小学教室（儿子版小学背景之一）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.ClassRoom.LITTLE_SCHOOL_CLASS_ROOM">
+            <summary>
+            小学教室内部靠窗（儿子版小学背景之一）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.ClassRoom.GIRL_MIDDLE_SCHOOL_CLASS_ROOM">
+            <summary>
+            女儿版初中教室内（黄昏那个）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.ClassRoom.SCHOOL_CLASS_ROOM_WITH_FLAG">
+            <summary>
+            广角镜拍摄的挂着国旗的教室（应该是某个背景，但没见过）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.ClassRoom.GIRL_LITTLE_SCHOOL_CLASS_ROOM">
+            <summary>
+            女儿版小学教室内（摄像机对着窗户，女儿后面一个男同学趴头睡那个）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.CorridorAndStair">
+            <summary>
+            走廊和楼梯
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.CorridorAndStair.MIDDLE_SCHOOL_CORRIDOR">
+            <summary>
+            初中学校走廊（有“初一2班”的门牌）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.CorridorAndStair.GIRL_MIDDLE_SCHOOL_CORRIDOR">
+            <summary>
+            女儿版初中走廊（有“初二(5)班”字样
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.CorridorAndStair.SCHOOL_STAIR">
+            <summary>
+            学校楼梯口（左侧是关着的门，右边是上下楼梯）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.CorridorAndStair.SCHOOL_ROOFTOP_STAIR">
+            <summary>
+            学校通往天台的楼梯（有天台门的楼梯转交）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Playground">
+            <summary>
+            操场
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Playground.PLAYGROUND_SIDE_2">
+            <summary>
+            操场旁边（儿子版初中背景之一）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Playground.PLAYGROUND_SIDE">
+            <summary>
+            学校操场旁边（苏芳允线最后出现过的操场旁边背景）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Playground.PLAYGROUND_SIDE_3_BICYCLE">
+            <summary>
+            体育场旁边停自行车的地方（儿子版初中背景之一）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Office">
+            <summary>
+            办公室
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Office.SCIENCE_TEACHER_OFFICE">
+            <summary>
+            科学老师办公室（有大量的模型、黑板上写了公式、柜子里是很多文件和书）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.InBuilding">
+            <summary>
+            建筑物内
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.InBuilding.SCHOOL_GYMNASIUNM">
+            <summary>
+            学校体育馆（篮球）（体育线的那个学校篮球馆）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.InBuilding.LIBRARY">
+            <summary>
+            图书馆（艺术线第一个事件的图书馆）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Dormitory">
+            <summary>
+            宿舍
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.InSchool.Dormitory.BOY_DORMITORY">
+            <summary>
+            男生宿舍（儿子版背景之一）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor">
+            <summary>
+            室外的背景图
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.NIGHT_STREET">
+            <summary>
+            夜晚街道（刘偏偏第一个事件的碰面的位置）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.FOOTBRIDGE_TRAFFIC_LIGHTS">
+            <summary>
+            天桥红绿灯白天（升小学对话的背景）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.FINANCE">
+            <summary>
+            金融产业区（金牛大雕塑，理财线结尾、席梦来线中途出现过）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.CLUB_STREET">
+            <summary>
+            俱乐部街道（厨艺线第一个事件的背景）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.SPORTS_CENTER">
+            <summary>
+            体育中心/大型露天体育馆 门口（夜晚，左侧是河，右边是体育馆）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.UNDERGROUND_MALL">
+            <summary>
+            地下商业街
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.WILD_NIGHT">
+            <summary>
+            夜晚的野外（席梦来线最后，能看到城市夜景的野外）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Outdoor.HIGHT_SCHOOL">
+            <summary>
+            高中门口
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor">
+            <summary>
+            室内的背景图
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Home">
+            <summary>
+            家里的背景图
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Home.CMOPUTER_ROOM">
+            <summary>
+            个人电脑房（编程线开发游戏时候的背景）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Home.BIRTHDAY">
+            <summary>
+            家庭生日会场
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Home.GIRL_HIGH_SCHOOL_BEDROOM">
+            <summary>
+            女儿版高中卧室
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Kindergarten">
+            <summary>
+            幼儿园背景
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Kindergarten.KIDERGARTEN">
+            <summary>
+            幼儿园（幼儿园背景之一）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Kindergarten.KIDERGARTEN_2">
+            <summary>
+            幼儿园（幼儿园背景之一）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Kindergarten.KIDERGARTEN_3">
+            <summary>
+            幼儿园（幼儿园背景之一）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.VarietyShow">
+            <summary>
+            综艺节目或演唱会
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.VarietyShow.LIVE">
+            <summary>
+            演唱会现场
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.VarietyShow.NICE_VOICE">
+            <summary>
+            好声音现场（类似中国好声音的那种评委转身的节目现场，有四个椅子）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.VarietyShow.BIG_SHOW">
+            <summary>
+            走秀宣传海报
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal">
+            <summary>
+            比较常规的背景
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.ART_GALLERY">
+            <summary>
+            艺术馆
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.FACTORY">
+            <summary>
+            工厂（有机械臂那个工厂流水线，席梦来线出现过）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.OFFICE">
+            <summary>
+            办公室（一排排电脑的办公室，如果当个白领结局就是这个背景）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.DRESSING_ROOM">
+            <summary>
+            化妆室（拍的是镜子）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.DOJO">
+            <summary>
+            日式道场（忍者线那个道场）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.HIGH_LEVEL_OFFICE">
+            <summary>
+            高层单人办公室（金融线的，豪华办公室）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.STOCK_EXCHANGE">
+            <summary>
+            证券交易所（金融线出现过）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Indoor.Normal.KITCHEN">
+            <summary>
+            厨房（美食线的那个餐厅厨房）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Vehicle">
+            <summary>
+            在交通工具内的背景图
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Vehicle.METRO">
+            <summary>
+            地铁内
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Especial">
+            <summary>
+            特殊背景图
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Especial.WHITE">
+            <summary>
+            纯白
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Especial.BLACK">
+            <summary>
+            纯黑
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Especial.DESK">
+            <summary>
+            结局时录取通知书的背景桌子
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Especial.BAD_END">
+            <summary>
+            心理阴影漫后的坏结局背景
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Especial.BLACK_GRAY_BLACK">
+            <summary>
+            上下黑条中间灰色的背景（相亲进度条的背景）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.BackgroundGraphs.Especial.OPEN_EYE">
+            <summary>
+            开场动画的睁眼背景（朦胧的光晕）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.Settings">
+            <summary>
+            这个 Mod 的设置
+            </summary>
+        </member>
+        <member name="P:MtC.Mod.ChineseParents.ChatControlLib.Main.ModEntry">
+            <summary>
+            Mod 对象
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.Main.enabled">
+            <summary>
+            这个 Mod 是否启动
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.Main.settings">
+            <summary>
+            这个 Mod 的设置
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.Main.OnToggle(UnityModManagerNet.UnityModManager.ModEntry,System.Boolean)">
+            <summary>
+            Mod Manager 对 Mod 进行控制的时候会调用这个方法
+            </summary>
+            <param name="modEntry"></param>
+            <param name="value">这个 Mod 是否激活</param>
+            <returns></returns>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.record_manager_saverecord">
+            <summary>
+            发起对话方法
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.record_manager_saverecord.PrintChatData(System.Int32)">
+            <summary>
+            输出对话数据的方法，用于辅助测试
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds">
+            <summary>
+            对话起始 id 收录，不完整，不保证更新
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot">
+            <summary>
+            流程性对话，一个游戏流程里必然会出现的对话，大部分是固定时间的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.NEW_ROUND_OPEN">
+            <summary>
+            新一代开幕（你也有了自己的孩子）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.NEW_ROUND_OPEN_MOTHER">
+            <summary>
+            新一代开幕-上一代是女儿版结局，新一代开幕父母对话（我XX也有了娃）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.NAODONG_INFO">
+            <summary>
+            第二天出现的对脑洞的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.PROMOTE_STUDY_SKILL">
+            <summary>
+            第三天出现的推荐点技能的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.POTENTIAL">
+            <summary>
+            第四天出现的对悟性消耗量的解释对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.FACING_VISIT">
+            <summary>
+            面子事件第一次出现
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.CLAIM">
+            <summary>
+            索取功能开启对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.IMPORTANT_PRIMARY_SCHOOL">
+            <summary>
+            重点小学达标期望出现对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.INHERIT_CHARACTER">
+            <summary>
+            继承父母性格对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.PRIMARY_SCHOOL">
+            <summary>
+            升小学对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.SHOP_OPEN">
+            <summary>
+            开启商店对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.EXAMINATION">
+            <summary>
+            第一次出现考试事件对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.WTITE_EXAM">
+            <summary>
+            第一次出现做题而不是脑洞的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.IMPORTANT_JUNIOR_MIDDLE_SCHOOL">
+            <summary>
+            重点初中达标期望出现对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.JUNIOR_MIDDLE_SCHOOL">
+            <summary>
+            升初中的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.JUNIOR_LOVING_OPEN">
+            <summary>
+            社交按钮出现的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.NOISY">
+            <summary>
+            班主任：楼道里就听见你们吵
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.TRANSFER_WANGSHENGNAN">
+            <summary>
+            王胜男转学事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.TRANSFER_LIRUOFANG">
+            <summary>
+            李若放转学事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.TRANSFER_TANGJINNA">
+            <summary>
+            汤金娜转学事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.IMPORTANT_HIGH_SCHOOL">
+            <summary>
+            重点高中达标期望出现对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.TRANSFER_SUFANGYUN">
+            <summary>
+            苏芳允转学事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Plot.TRANSFER_MUWEI">
+            <summary>
+            牧唯转学事件的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Satisfaction">
+            <summary>
+            满意度相关
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Satisfaction.Good">
+            <summary>
+            高满意度
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Satisfaction.Good.GOOD_8">
+            <summary>
+            高满意度事件对话（我站在高高的沙发旁边）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Satisfaction.Good.GOOD_9">
+            <summary>
+            高满意度事件对话（带你去吃好吃的）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Satisfaction.Good.GOOD_10">
+            <summary>
+            高满意度事件对话（真不愧是我亲生的）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Pressure">
+            <summary>
+            压力相关
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Pressure.Good">
+            <summary>
+            低压力
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Pressure.Good.GOOD_2">
+            <summary>
+            低压力事件对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Pressure.Good.GOOD_3">
+            <summary>
+            低压力事件对话（内心平稳）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Examiation">
+            <summary>
+            考试相关对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Examiation.EXCELLENT">
+            <summary>
+            考试结果为优的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.LuckDraw">
+            <summary>
+            抽奖相关对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.LuckDraw.Zero">
+            <summary>
+            没有抽中的号的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Draft">
+            <summary>
+            选秀相关对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Draft.OPEN">
+            <summary>
+            选秀开场白
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Draft.BATTLE">
+            <summary>
+            选秀开赛，就是选秀选择特长后的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Challenge">
+            <summary>
+            面子挑战相关对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Challenge.AIYINSAN_INFO">
+            <summary>
+            艾殷散（理科挑战）挑战信息
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Challenge.LIER_INFO">
+            <summary>
+            李二（运动挑战）挑战信息
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Challenge.XIAOFENQI_INFO">
+            <summary>
+            肖芬琪（艺术挑战）挑战信息
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Challenge.CONGCONG_INFO">
+            <summary>
+            聪聪（金钱挑战）挑战信息
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Challenge.XUANJIEYI_INFO">
+            <summary>
+            宣洁衣（美貌挑战）挑战信息
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill">
+            <summary>
+            技能相关对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study">
+            <summary>
+            学会技能后立刻出现的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Normal">
+            <summary>
+            普通线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Normal.WALK">
+            <summary>
+            学会走路技能后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Normal.RUN">
+            <summary>
+            学会跑步技能后的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Emotion">
+            <summary>
+            情绪线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Emotion.TALK_MOTHER">
+            <summary>
+            学会说话技能后的对话，可能是上一代是女儿才会出现的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Emotion.EXERCISE_PATIRNCE">
+            <summary>
+            学会忍耐技能后的对话，可能是上一代是女儿才会出现的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Emotion.DELAYER_SATISFACTION">
+            <summary>
+            学会延迟满足技能后的对话，可能是上一代是女儿才会出现的
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Chinese">
+            <summary>
+            语文线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Chinese.LITERACY_AND_WRITING">
+            <summary>
+            学会识字写字后的对话（永字八法）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Chinese.CHINESE_COMPOSITION">
+            <summary>
+            学会语文作文后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Chinese.NOVEL">
+            <summary>
+            学会写小说后的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Math">
+            <summary>
+            数学线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Math.FOUR_ARITHMETIC">
+            <summary>
+            学会四则运算后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Math.PROBABILITY">
+            <summary>
+            学会数学概率后的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.English">
+            <summary>
+            英语线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.English.ENGLISH_WORDS">
+            <summary>
+            学会英语单词后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.English.ENGLISH_LISTENING">
+            <summary>
+            学会英语听力后的对话（东北大碴子味
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Integrated">
+            <summary>
+            文综线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Integrated.HISTORICAL_COMMON_SCESE">
+            <summary>
+            学会历史常识后的对话（五千年的风和雨，藏了多少梦）
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Integrated.WORLD_GEOGRAPHY">
+            <summary>
+            学会世界地理后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Integrated.ECONOMIC_KNOWLEDGE">
+            <summary>
+            学会经济常识后的对话（郁金香泡沫）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Science">
+            <summary>
+            理综线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Science.PHYSICS_KNOWLEDGE">
+            <summary>
+            学会物理常识后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Science.MODEL_KNOWLEDGE">
+            <summary>
+            学会模型常识后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Science.JUNIOR_MIDDLE_SCHOOL_BIOLOGY">
+            <summary>
+            学会初中生物后的对话（21世纪是____的世纪）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.PE">
+            <summary>
+            体育线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.PE.PHYSICAL_TRAINING">
+            <summary>
+            学会体能训练技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.PE.SCHOOL_TEAM_TRAINING">
+            <summary>
+            学会校队训练技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.PE.MIDDLE_SCHOOL_BASKETBALL_TRAINING">
+            <summary>
+            学会中学篮球集训技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.PE.AMERICAN_SPECIAL_TRAINING">
+            <summary>
+            学会美式特训技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.PE.PROFESSIONAL_BASKETBALL">
+            <summary>
+            学会专业篮球特训技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.PE.NATIONAL_YOUTH_TEAM_TRAINING">
+            <summary>
+            学会国青队集训技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Art">
+            <summary>
+            艺术线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Art.COLOR">
+            <summary>
+            学会色彩技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Computer">
+            <summary>
+            编程线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Computer.INTRODUCTION">
+            <summary>
+            学会计算机入门后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Computer.HYPERTEXT">
+            <summary>
+            学会超文本后的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Justice">
+            <summary>
+            正义线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Study.Justice.TAEKWONDO">
+            <summary>
+            学会跆拳道后的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event">
+            <summary>
+            学会技能后出现事件的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE">
+            <summary>
+            体育线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE.CLASS">
+            <summary>
+            学会体育课技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE.RUN_50M">
+            <summary>
+            学会 50米跑 技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE.ABDOMINAL_CURL">
+            <summary>
+            学会仰卧起坐技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE.ABDOMINAL_CURL_2">
+            <summary>
+            学会仰卧起坐技能并且上一个事件出现过后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE.SHOOT">
+            <summary>
+            学会投篮技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE.SHOOT_2">
+            <summary>
+            学会投篮技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.PE.AMERICAN_SPECIAL_TRAINING">
+            <summary>
+            学会美式特训技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Art">
+            <summary>
+            艺术线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Art.CLASS">
+            <summary>
+            学会美术课技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Art.GRAFFITI">
+            <summary>
+            学会涂鸦技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Art.APPRECIATION">
+            <summary>
+            学会艺术赏析技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Art.SKETCH">
+            <summary>
+            学会素描技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Art.COLOR">
+            <summary>
+            学会色彩技能后出现的事件的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Computer">
+            <summary>
+            编程线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Computer.INTRODUCTION">
+            <summary>
+            学会计算机入门后出现的事件的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Computer.HYPERTEXT">
+            <summary>
+            学会超文本后出现的事件的对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Justice">
+            <summary>
+            正义线
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Justice.TAEKWONDO">
+            <summary>
+            学习-学会-正义-学会跆拳道后的对话
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Skill.Event.Justice.TAEKWONDO_2">
+            <summary>
+            学习-学会-正义-学会跆拳道后的第二个对话
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving">
+            <summary>
+            社交相关
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.Player">
+            <summary>
+            以玩家为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.Player.GOOD">
+            <summary>
+            好感度增加
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.Player.ALERT_SON_NONE">
+            <summary>
+            儿子版-几乎无警告（该找谁呢）
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.LiuPianPian">
+            <summary>
+            以刘偏偏为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.LiuPianPian.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.XiMengLai">
+            <summary>
+            以席梦来为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.XiMengLai.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.XiMengLai.START_LOVING">
+            <summary>
+            开场白
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.XiMengLai.GOOD">
+            <summary>
+            好效果
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.QinYuLu">
+            <summary>
+            以秦屿路为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.QinYuLu.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.ZangHanZhi">
+            <summary>
+            以章涵之为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.ZangHanZhi.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.WangShegnNan">
+            <summary>
+            以王胜男为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.WangShegnNan.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.LiRuoFang">
+            <summary>
+            以李若放为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.LiRuoFang.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.TangJinNa">
+            <summary>
+            以汤金娜为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.TangJinNa.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.SuFangYun">
+            <summary>
+            以苏芳允为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.SuFangYun.CANT_TALK">
+            <summary>
+            不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.MuWei">
+            <summary>
+            以牧唯为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.MuWei.CANT_TALK">
+            <summary>
+            社交-牧唯-不符合对话条件
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.MengMeng">
+            <summary>
+            以闺蜜为主
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatIds.Loving.MengMeng.NO_COMPANY">
+            <summary>
+            闺蜜长时间不陪伴隐藏剧情
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData">
+            <summary>
+            对话数据
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.name">
+            <summary>
+            这个对话的名称，主要是用于区分的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.type">
+            <summary>
+            不确定内容，但是在原版代码中发现如果这个字段为 7000000 并且为试用版会有特殊处理，同时原版对话数据显示一串对话基本都有相同的 type
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.next_id">
+            <summary>
+            如果是儿子版，下一个对话的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.next_id_girl">
+            <summary>
+            如果是女儿版，下一个对话的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text">
+            <summary>
+            儿子版的对话内容
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text_id">
+            <summary>
+            儿子版的对话内容 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text_girl">
+            <summary>
+            女儿版的对话内容
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text_girl_id">
+            <summary>
+            女儿版的对话内容 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.add_task">
+            <summary>
+            儿子版这个对话完成后添加期望的 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player">
+            <summary>
+            儿子版中这个对话说话的人的名字
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player_id">
+            <summary>
+            儿子版中这个对话说话的人的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.image">
+            <summary>
+            儿子版中这个对话显示的人物图片
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.add_task_girl">
+            <summary>
+            女儿版这个对话完成后添加期望的 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player_girl">
+            <summary>
+            女儿版中这个对话说话的人的名字
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player_girl_id">
+            <summary>
+            女儿版中这个对话说话的人的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.image_girl">
+            <summary>
+            女儿版中这个对话显示的人物图片
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.loving_effect">
+            <summary>
+            好感度变化动画效果，1 是好感度提高，2 是好感度下降，0 是不播放好感变化动画
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.graph">
+            <summary>
+            背景图，如果是 "0" 则表示没有背景图
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.shake">
+            <summary>
+            对话框弹出效果，1 是有弹出效果，0 是没有
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.effect">
+            <summary>
+            对话完成后发出 Effect 的 id，这个 Effect 是 effect_data.Effect 方法使用的，而这个方法似乎有加属性、开工作选项等功能
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.Copy">
+            <summary>
+            复制一个新的 <see cref="T:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.ToXmlData">
+            <summary>
+            返回这个对话数据的 <see cref="T:XmlData"/> 版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.beforeModify">
+            <summary>
+            优先处理方法列表，这个列表中的方法将会优先于修改对话对【每一条】对话进行处理，参数格式与修改对话的方法一致
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.modifyChats">
+            <summary>
+            需要修改的对话的列表，委托的格式是 处理后的对话数据 Func(原逻辑的对话数据, 经过前面的委托处理后的对话数据)
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.BeforeModifyChat(System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+            <summary>
+            对所有对话进行修改，在指定修改之前进行
+            </summary>
+            <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.RemoveBeforeModifyChat(System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+            <summary>
+            移除对所有对话进行修改的方法
+            </summary>
+            <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ModifyChat(System.Int32,System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+            <summary>
+            修改指定的对话
+            </summary>
+            <param name="chatId">要修改的对话的 ID</param>
+            <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.RemoveModifyChat(System.Int32,System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+            <summary>
+            取消修改指定的对话
+            </summary>
+            <param name="chatId">要取消修改的对话的 ID</param>
+            <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ReadXml_GetData">
+            <summary>
+            读取数据方法。对话内容通过这个方法读取，在这里后缀即可修改对话内容
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ReadXml_GetData.GetDataParam">
+            <summary>
+            在前后缀之间传递 GetData 方法参数的类
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.XmlData_GetStringLanguage">
+            <summary>
+            读取数据方法。对话内容通过这个方法读取，在这里后缀即可修改对话内容
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.XmlData_GetStringLanguage.GetStringLanguageParam">
+            <summary>
+            在前后缀之间传递 GetStringLanguage 方法参数的类
+            </summary>
+        </member>
+    </members>
+</doc>
