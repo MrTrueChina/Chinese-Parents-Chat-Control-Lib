@@ -1241,5 +1241,265 @@
             在前后缀之间传递 GetStringLanguage 方法参数的类
             </summary>
         </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph">
+            <summary>
+            NPC 图片
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiuPianPian">
+            <summary>
+            刘偏偏
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiuPianPian.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiuPianPian.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiuPianPian.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.XiMengLai">
+            <summary>
+            席梦来
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.XiMengLai.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.XiMengLai.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.XiMengLai.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.QinYuLu">
+            <summary>
+            秦屿路
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.QinYuLu.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.QinYuLu.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.QinYuLu.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.ZhangHanZhi">
+            <summary>
+            章涵之
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.ZhangHanZhi.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.ZhangHanZhi.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.ZhangHanZhi.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.WangShengNan">
+            <summary>
+            王胜男
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.WangShengNan.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.WangShengNan.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.WangShengNan.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiRuoFang">
+            <summary>
+            李若放
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiRuoFang.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiRuoFang.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.LiRuoFang.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.TangJinNa">
+            <summary>
+            汤金娜
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.TangJinNa.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.TangJinNa.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.TangJinNa.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.SuFangYun">
+            <summary>
+            苏芳允
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.SuFangYun.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.SuFangYun.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.SuFangYun.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.MuWei">
+            <summary>
+            牧唯
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.MuWei.GOOD">
+            <summary>
+            好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.MuWei.NORMAL">
+            <summary>
+            默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.MuWei.BAD">
+            <summary>
+            坏心情立绘
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other">
+            <summary>
+            其他角色
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.GRANDMA_NORMAL">
+            <summary>
+            奶奶默认立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.GRANDMA_GOOD">
+            <summary>
+            奶奶好心情立绘
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.COOK">
+            <summary>
+            厨师
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.DIARY">
+            <summary>
+            记事本
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.QIU_DA">
+            <summary>
+            秋达
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.Fu_JINA_LAO_ZEI">
+            <summary>
+            富坚老贼
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.PF_TEACHER">
+            <summary>
+            体育老师
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.RADIO">
+            <summary>
+            收音机
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.GONG_QI_JUN">
+            <summary>
+            宫崎骏
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.LIU_PIAN_PIAN_MOM">
+            <summary>
+            刘偏偏妈妈
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.LONG_TAO_JIA">
+            <summary>
+            龙套甲
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.LONG_TAO_YI">
+            <summary>
+            龙套乙
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.TEACHER">
+            <summary>
+            老师
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.NPCGraph.Other.WANG_SHENG_NAN_GRANDPA">
+            <summary>
+            王胜男爷爷
+            </summary>
+        </member>
     </members>
 </doc>
