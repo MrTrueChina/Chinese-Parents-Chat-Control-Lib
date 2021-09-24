@@ -14,10 +14,6 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         public class ChatData
         {
             /// <summary>
-            /// 这个对话的 ID
-            /// </summary>
-            public int id = 0;
-            /// <summary>
             /// 这个对话的名称，主要是用于区分的
             /// </summary>
             public string name = "第二代以后开场剧情";
@@ -102,7 +98,6 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
 
             public ChatData(XmlData chatData)
             {
-                id = chatData.GetInt("id");
                 name = chatData.GetString("name");
                 type = chatData.GetInt("type");
                 next_id = chatData.GetInt("next_id");
@@ -158,7 +153,6 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             {
                 ChatData newChatData = new ChatData();
 
-                newChatData.id = id;
                 newChatData.name = name;
                 newChatData.type = type;
                 newChatData.next_id = next_id;
@@ -189,44 +183,68 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             /// <returns></returns>
             public XmlData ToXmlData()
             {
-                XmlData xmlData = new XmlData();
+                // XmlData 的创建逻辑是用 Dictionary 作为参数创建，所以不能直接 new 一个 XmlData
+                Dictionary<string, string> data = new Dictionary<string, string>();
 
-                xmlData.value.Add("id", id.ToString());
-                xmlData.value.Add("name", name != null ? name.ToString() : "0");
-                xmlData.value.Add("type", type.ToString());
-                xmlData.value.Add("next_id", next_id.ToString());
-                xmlData.value.Add("next_id_girl", next_id_girl.ToString());
-                xmlData.value.Add("text", text != null ? text.ToString() : "0");
-                xmlData.value.Add("text_id", text_id.ToString());
-                xmlData.value.Add("text_girl", text_girl != null ? text_girl.ToString() : "0");
-                xmlData.value.Add("text_girl_id", text_girl_id.ToString());
-                xmlData.value.Add("add_task", add_task.ToString());
-                xmlData.value.Add("player", player != null ? player.ToString() : "0");
-                xmlData.value.Add("player_id", player_id.ToString());
-                xmlData.value.Add("image", image != null ? image.ToString() : "0");
-                xmlData.value.Add("add_task_girl", add_task_girl.ToString());
-                xmlData.value.Add("player_girl", player_girl != null ? player_girl.ToString() : "0");
-                xmlData.value.Add("player_girl_id", player_girl_id.ToString());
-                xmlData.value.Add("image_girl", image_girl != null ? image_girl.ToString() : "0");
-                xmlData.value.Add("loving_effect", loving_effect.ToString());
-                xmlData.value.Add("graph", graph != null ? graph.ToString() : "0");
-                xmlData.value.Add("shake", shake.ToString());
-                xmlData.value.Add("effect", effect.ToString());
+                data.Add("name", name != null ? name.ToString() : "0");
+                data.Add("type", type.ToString());
+                data.Add("next_id", next_id.ToString());
+                data.Add("next_id_girl", next_id_girl.ToString());
+                data.Add("text", text != null ? text.ToString() : "0");
+                data.Add("text_id", text_id.ToString());
+                data.Add("text_girl", text_girl != null ? text_girl.ToString() : "0");
+                data.Add("text_girl_id", text_girl_id.ToString());
+                data.Add("add_task", add_task.ToString());
+                data.Add("player", player != null ? player.ToString() : "0");
+                data.Add("player_id", player_id.ToString());
+                data.Add("image", image != null ? image.ToString() : "0");
+                data.Add("add_task_girl", add_task_girl.ToString());
+                data.Add("player_girl", player_girl != null ? player_girl.ToString() : "0");
+                data.Add("player_girl_id", player_girl_id.ToString());
+                data.Add("image_girl", image_girl != null ? image_girl.ToString() : "0");
+                data.Add("loving_effect", loving_effect.ToString());
+                data.Add("graph", graph != null ? graph.ToString() : "0");
+                data.Add("shake", shake.ToString());
+                data.Add("effect", effect.ToString());
 
-                return xmlData;
+                return new XmlData(data);
             }
         }
 
+        /// <summary>
+        /// 优先处理方法列表，这个列表中的方法将会优先于修改对话对【每一条】对话进行处理，参数格式与修改对话的方法一致
+        /// </summary>
+        internal static List<Func<ChatData, ChatData, ChatData>> beforeModify = new List<Func<ChatData, ChatData, ChatData>>();
         /// <summary>
         /// 需要修改的对话的列表，委托的格式是 处理后的对话数据 Func(原逻辑的对话数据, 经过前面的委托处理后的对话数据)
         /// </summary>
         internal static Dictionary<int, List<Func<ChatData, ChatData, ChatData>>> modifyChats = new Dictionary<int, List<Func<ChatData, ChatData, ChatData>>>();
 
         /// <summary>
+        /// 对所有对话进行修改，在指定修改之前进行
+        /// </summary>
+        /// <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
+        public static void BeforeModifyChat(Func<ChatData, ChatData, ChatData> modify)
+        {
+            // 添加进优先处理方法列表里
+            beforeModify.Add(modify);
+        }
+
+        /// <summary>
+        /// 移除对所有对话进行修改的方法
+        /// </summary>
+        /// <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
+        public static void RemoveBeforeModifyChat(Func<ChatData, ChatData, ChatData> modify)
+        {
+            // 从优先处理方法列表里移除
+            beforeModify.Remove(modify);
+        }
+
+        /// <summary>
         /// 修改指定的对话
         /// </summary>
         /// <param name="chatId">要修改的对话的 ID</param>
-        /// <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)</param>
+        /// <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
         public static void ModifyChat(int chatId, Func<ChatData, ChatData, ChatData> modify)
         {
             // 如果没有修改这个 ID 对话的方法则先创建列表
@@ -243,7 +261,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 取消修改指定的对话
         /// </summary>
         /// <param name="chatId">要取消修改的对话的 ID</param>
-        /// <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)</param>
+        /// <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
         public static void RemoveModifyChat(int chatId, Func<ChatData, ChatData, ChatData> modify)
         {
             // 如果没有修改这个 ID 对话的方法则先创建列表
@@ -283,7 +301,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             // 将参数传给后缀，这是因为这个方法有可能在内部改变参数
             __state = new GetDataParam(fileName, id);
         }
-        
+
         private static void Postfix(GetDataParam __state, ref XmlData __result)
         {
             // 如果 Mod 未启动则不作处理
@@ -298,21 +316,106 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 return;
             }
 
-            // 如果这个对话有进行修改的方法，则依次进行调用进行修改
+            // 转化出对话数据
+            ChatControl.ChatData originChatData = new ChatControl.ChatData(__result);
+            ChatControl.ChatData modifiedChatData = new ChatControl.ChatData(__result);
+
+            // 进行优先处理
+            ChatControl.beforeModify.ForEach(modify =>
+            {
+                modifiedChatData = modify.Invoke(originChatData, modifiedChatData);
+            });
+
+            // 如果这个对话有针对性进行修改的方法，则依次进行调用进行修改
             if (ChatControl.modifyChats.ContainsKey(__state.id))
             {
-                // 转化出对话数据
-                ChatControl.ChatData originChatData = new ChatControl.ChatData(__result);
-                ChatControl.ChatData modifiedChatData = new ChatControl.ChatData(__result);
+                Main.ModEntry.Logger.Log("发现 id 为 " + __state.id + " 的对话需要针对性修改");
 
                 // 遍历修改
                 ChatControl.modifyChats[__state.id].ForEach(modify =>
                 {
                     modifiedChatData = modify.Invoke(originChatData, modifiedChatData);
                 });
+            }
 
-                // 用编辑后的对话数据替换原来的对话数据
-                __result = modifiedChatData.ToXmlData();
+            // 用编辑后的对话数据替换原来的对话数据
+            __result = modifiedChatData.ToXmlData();
+        }
+    }
+
+    /// <summary>
+    /// 读取数据方法。对话内容通过这个方法读取，在这里后缀即可修改对话内容
+    /// </summary>
+    [HarmonyPatch(typeof(XmlData), "GetStringLanguage", new Type[] { typeof(string), typeof(bool) })]
+    public static class XmlData_GetStringLanguage
+    {
+        /// <summary>
+        /// 在前后缀之间传递 GetStringLanguage 方法参数的类
+        /// </summary>
+        private class GetStringLanguageParam
+        {
+            public string name;
+            public bool sex;
+
+            public GetStringLanguageParam(string name, bool sex)
+            {
+                this.name = name;
+                this.sex = sex;
+            }
+        }
+
+        private static void Prefix(out GetStringLanguageParam __state, string name, bool sex)
+        {
+            // 将参数传给后缀，这是因为这个方法有可能在内部改变参数
+            __state = new GetStringLanguageParam(name, sex);
+        }
+
+        private static void Postfix(GetStringLanguageParam __state, XmlData __instance, ref string __result)
+        {
+            // 如果 Mod 未启动则不作处理
+            if (!Main.enabled)
+            {
+                return;
+            }
+
+            // 如果要获取的不是对话文本则不处理
+            if (!"text".Equals(__state.name) || !__state.sex)
+            {
+                return;
+            }
+
+            // 遍历所有修改的对话，找出当前获取的文本属于的对话，对默认值的判断可能出现偏差，手动记录是否找到使用了文本的对话
+            XmlData targetChatData = default(XmlData);
+            bool haveTargetData = false;
+            foreach(KeyValuePair<int, List<Func<ChatControl.ChatData, ChatControl.ChatData, ChatControl.ChatData>>> modifyChat in ChatControl.modifyChats)
+            {
+                XmlData chatData = ReadXml.GetData("chat", modifyChat.Key);
+
+                // 如果是儿子版并且当前要修改的对话的儿子版文本 id 等于要获取的文本的 id 则这个对话就是目标对话，女儿版则是比较女儿版文本 id
+                if ((record_manager.InstanceManagerRecord.IsBoy() && chatData.GetInt("text_id") == __instance.GetInt("text_id"))
+                    || (!record_manager.InstanceManagerRecord.IsBoy() && chatData.GetInt("text_girl_id") == __instance.GetInt("text_girl_id")))
+                {
+                    Main.ModEntry.Logger.Log("发现使用了 id 为 " + __instance.GetInt("text_girl_id") + " 的对话，对话 id = " + modifyChat.Key);
+                    targetChatData = chatData;
+                    haveTargetData = true;
+                    break;
+                }
+            }
+
+            // 如果没找到这个文本所属的对话，则说明这个文本所属的对话并不需要修改，那么这个文本也不作处理
+            if(!haveTargetData)
+            {
+                return;
+            }
+
+            // 根据性别修改返回值为对话文本
+            if (record_manager.InstanceManagerRecord.IsBoy())
+            {
+                __result = targetChatData.GetString("text");
+            }
+            else
+            {
+                __result = targetChatData.GetString("text_girl");
             }
         }
     }
