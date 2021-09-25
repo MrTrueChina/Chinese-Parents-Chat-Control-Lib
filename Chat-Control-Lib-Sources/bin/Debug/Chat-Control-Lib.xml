@@ -383,6 +383,142 @@
             </summary>
             <param name="id"></param>
         </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.NO_TEXT_ID">
+            <summary>
+            没有文本的文本 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.id">
+            <summary>
+            这个对话的 id，需要注意这个值在 XmlData 里是没有的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.name">
+            <summary>
+            这个对话的名称，主要是用于区分的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.type">
+            <summary>
+            不确定内容，但是在原版代码中发现如果这个字段为 7000000 并且为试用版会有特殊处理，同时原版对话数据显示一串对话基本都有相同的 type
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.next_id">
+            <summary>
+            如果是儿子版，下一个对话的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.next_id_girl">
+            <summary>
+            如果是女儿版，下一个对话的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.text">
+            <summary>
+            儿子版的对话内容
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.text_id">
+            <summary>
+            儿子版的对话内容 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.text_girl">
+            <summary>
+            女儿版的对话内容
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.text_girl_id">
+            <summary>
+            女儿版的对话内容 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.add_task">
+            <summary>
+            儿子版这个对话完成后添加期望的 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.player">
+            <summary>
+            儿子版中这个对话说话的人的名字
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.player_id">
+            <summary>
+            儿子版中这个对话说话的人的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.image">
+            <summary>
+            儿子版中这个对话显示的人物图片
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.add_task_girl">
+            <summary>
+            女儿版这个对话完成后添加期望的 id
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.player_girl">
+            <summary>
+            女儿版中这个对话说话的人的名字
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.player_girl_id">
+            <summary>
+            女儿版中这个对话说话的人的 ID
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.image_girl">
+            <summary>
+            女儿版中这个对话显示的人物图片
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.loving_effect">
+            <summary>
+            好感度变化动画效果，1 是好感度提高，2 是好感度下降，0 是不播放好感变化动画
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.graph">
+            <summary>
+            背景图，如果是 "0" 则表示没有背景图
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.shake">
+            <summary>
+            对话框弹出效果，1 是有弹出效果，0 是没有
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatData.effect">
+            <summary>
+            对话完成后发出 Effect 的 id，这个 Effect 是 effect_data.Effect 方法使用的，而这个方法似乎有加属性、开工作选项等功能
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatData.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            用于创建对话内容的构造方法，这个方法会尽可能的将儿子版和女儿版字段使用相同的数值
+            </summary>
+            <param name="text">对话的文本</param>
+            <param name="player">说这段话的人的名字</param>
+            <param name="player_id">说这段话的人的 id</param>
+            <param name="playerImage">说这段话的人的图片</param>
+            <param name="backgroundGraph">背景图</param>
+            <param name="shake">弹出对话框效果，1 是弹出对话框，0 是不弹出对话框</param>
+            <param name="lovingEffect">好感效果，1 是好感度提高，2 是好感度下降，0 是不播放好感变化动画</param>
+            <param name="taskId">对话完成后添加期望的 id</param>
+            <param name="effectId">对话完成后产生效果的 id</param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatData.Copy">
+            <summary>
+            复制一个新的 <see cref="T:MtC.Mod.ChineseParents.ChatControlLib.ChatData"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatData.ToXmlData">
+            <summary>
+            返回这个对话数据的 <see cref="T:XmlData"/> 版
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatIds">
             <summary>
             对话起始 id 收录，不完整，不保证更新
@@ -1058,126 +1194,9 @@
             闺蜜长时间不陪伴隐藏剧情
             </summary>
         </member>
-        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData">
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ChatControl">
             <summary>
-            对话数据
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.name">
-            <summary>
-            这个对话的名称，主要是用于区分的
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.type">
-            <summary>
-            不确定内容，但是在原版代码中发现如果这个字段为 7000000 并且为试用版会有特殊处理，同时原版对话数据显示一串对话基本都有相同的 type
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.next_id">
-            <summary>
-            如果是儿子版，下一个对话的 ID
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.next_id_girl">
-            <summary>
-            如果是女儿版，下一个对话的 ID
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text">
-            <summary>
-            儿子版的对话内容
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text_id">
-            <summary>
-            儿子版的对话内容 id
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text_girl">
-            <summary>
-            女儿版的对话内容
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.text_girl_id">
-            <summary>
-            女儿版的对话内容 id
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.add_task">
-            <summary>
-            儿子版这个对话完成后添加期望的 id
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player">
-            <summary>
-            儿子版中这个对话说话的人的名字
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player_id">
-            <summary>
-            儿子版中这个对话说话的人的 ID
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.image">
-            <summary>
-            儿子版中这个对话显示的人物图片
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.add_task_girl">
-            <summary>
-            女儿版这个对话完成后添加期望的 id
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player_girl">
-            <summary>
-            女儿版中这个对话说话的人的名字
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.player_girl_id">
-            <summary>
-            女儿版中这个对话说话的人的 ID
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.image_girl">
-            <summary>
-            女儿版中这个对话显示的人物图片
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.loving_effect">
-            <summary>
-            好感度变化动画效果，1 是好感度提高，2 是好感度下降，0 是不播放好感变化动画
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.graph">
-            <summary>
-            背景图，如果是 "0" 则表示没有背景图
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.shake">
-            <summary>
-            对话框弹出效果，1 是有弹出效果，0 是没有
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.effect">
-            <summary>
-            对话完成后发出 Effect 的 id，这个 Effect 是 effect_data.Effect 方法使用的，而这个方法似乎有加属性、开工作选项等功能
-            </summary>
-        </member>
-        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.Copy">
-            <summary>
-            复制一个新的 <see cref="T:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData"/>
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData.ToXmlData">
-            <summary>
-            返回这个对话数据的 <see cref="T:XmlData"/> 版
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.NO_TEXT_ID">
-            <summary>
-            没有文本的文本 ID
+            对话控制器
             </summary>
         </member>
         <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.beforeModify">
@@ -1195,31 +1214,64 @@
             文本 id 到对话 id 的映射表，儿子女儿文本共用
             </summary>
         </member>
-        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.BeforeModifyChat(System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.typeIdCounter">
+            <summary>
+            类型 ID 计数器
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.chatIdCounter">
+            <summary>
+            对话 ID 计数器
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.textIdCounter">
+            <summary>
+            文本 ID 计数器
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.BeforeModifyChat(System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData})">
             <summary>
             对所有对话进行修改，在指定修改之前进行
             </summary>
             <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
         </member>
-        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.RemoveBeforeModifyChat(System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.RemoveBeforeModifyChat(System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData})">
             <summary>
             移除对所有对话进行修改的方法
             </summary>
             <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
         </member>
-        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ModifyChat(System.Int32,System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ModifyChat(System.Int32,System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData})">
             <summary>
             修改指定的对话
             </summary>
             <param name="chatId">要修改的对话的 ID</param>
             <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
         </member>
-        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.RemoveModifyChat(System.Int32,System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ChatData})">
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.RemoveModifyChat(System.Int32,System.Func{MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData,MtC.Mod.ChineseParents.ChatControlLib.ChatData})">
             <summary>
             取消修改指定的对话
             </summary>
             <param name="chatId">要取消修改的对话的 ID</param>
             <param name="modify">修改方法，格式是：修改后的对话数据 Modify(原逻辑获取到的原始对话数据, 经过前面的修改方法修改后的对话数据)<br/>注意这个方法不能修改 text_id 和 text_girl_id 可能导致深层的逻辑 Bug</param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ApplyChatIds(System.Int32)">
+            <summary>
+            申请一定数量的对话 id，这个对话 id 可以用来添加修改对话，如果不从这个方法申请 id 则可能由于 id 冲突发生对话修改错误
+            </summary>
+            <param name="number"></param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ApplyTextIds(System.Int32)">
+            <summary>
+            申请一定数量的文本 id，这个文本 id 可以用来添加修改对话，如果不从这个方法申请 id 则可能由于 id 冲突发生对话修改错误
+            </summary>
+            <param name="number"></param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.ApplyTypeIds(System.Int32)">
+            <summary>
+            申请一定数量的类型 id，这个类型 id 可以用来添加修改对话，如果不从这个方法申请 id 则可能由于 id 冲突发生对话修改错误
+            </summary>
+            <param name="number"></param>
         </member>
         <member name="T:MtC.Mod.ChineseParents.ChatControlLib.ReadXml_GetData">
             <summary>
