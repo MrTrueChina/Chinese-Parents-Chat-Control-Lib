@@ -25,10 +25,6 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         internal static Dictionary<int, int> textIdToChatId = new Dictionary<int, int>();
 
         /// <summary>
-        /// 类型 ID 计数器
-        /// </summary>
-        private static int typeIdCounter = -1;
-        /// <summary>
         /// 对话 ID 计数器
         /// </summary>
         private static int chatIdCounter = -1;
@@ -36,6 +32,15 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 文本 ID 计数器
         /// </summary>
         private static int textIdCounter = -1;
+
+        /// <summary>
+        /// 默认对话 ID，如果要获取的对话 ID 没有数据则替换为这个 ID
+        /// </summary>
+        internal const int DEFAULT_CHAT_ID = 10001;
+        /// <summary>
+        /// 默认文本 ID，如果要获取的文本 ID 没有数据则替换为这个 ID
+        /// </summary>
+        internal const int DEFAULT_TEXT_ID = 1018095;
 
         /// <summary>
         /// 对所有对话进行修改，在指定修改之前进行
@@ -124,23 +129,6 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
 
             return textIds;
         }
-
-        /// <summary>
-        /// 申请一定数量的类型 id，这个类型 id 可以用来添加修改对话，如果不从这个方法申请 id 则可能由于 id 冲突发生对话修改错误
-        /// </summary>
-        /// <param name="number"></param>
-        public static List<int> ApplyTypeIds(int number)
-        {
-            List<int> typeIds = new List<int>();
-
-            for (int i = 0; i < number; i++)
-            {
-                typeIdCounter--;
-                typeIds.Add(typeIdCounter);
-            }
-
-            return typeIds;
-        }
     }
 
     /// <summary>
@@ -164,10 +152,30 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             }
         }
 
-        private static void Prefix(out GetDataParam __state, string fileName, int id)
+        private static void Prefix(out GetDataParam __state, string fileName, ref int id)
         {
             // 将参数传给后缀，这是因为这个方法有可能在内部改变参数
             __state = new GetDataParam(fileName, id);
+
+            // 如果 Mod 未启动则不作处理
+            if (!Main.enabled)
+            {
+                return;
+            }
+
+            // 如果要获取的是对话数据 并且 没有要获取的 id 的对话，那么这个对话就是新添加的对话，将 id 替换为默认对话 id
+            if ("chat".Equals(__state.fileName) && !ReadXml.HaveData(__state.fileName, __state.id))
+            {
+                id = ChatControl.DEFAULT_CHAT_ID;
+                return;
+            }
+
+            // 如果要获取的是文本数据 并且 没有要获取的 id 的文本，那么这个文本就是新添加的对话的文本，将 id 替换为默认文本 id
+            if ("language".Equals(__state.fileName) && !ReadXml.HaveData(__state.fileName, __state.id))
+            {
+                id = ChatControl.DEFAULT_TEXT_ID;
+                return;
+            }
         }
 
         private static void Postfix(GetDataParam __state, ref XmlData __result)

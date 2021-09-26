@@ -168,7 +168,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             }
         }
 
-        // 以下是对原代码的提取和注释，留作参考
+        ////以下是对原代码的提取和注释，留作参考
         //private static bool Prefix(chat_manager __instance, ref GameObject ___PanelGameObject, ref bool ___changedBGM, ref List<string> ___chatPlayerList, ref List<string>[] ___chatPlayerLists, ref List<string>[] ___chatDaughterLists, ref int ___effectId, ref int ___nextId, ref int ___curId, int id, int next, int next2, begintalkoverAction completeAction, string newtext, Transform parentTransform, string param, bool moreText, bool isAnniversary)
         //{
         //    // 如果 Mod 未启动则直接按照游戏原本的逻辑进行调用
@@ -179,11 +179,11 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
 
         //    PrintChatData(id);
 
-        //    // 不是目标
-        //    if (id != 8200801 && id != 8200901)
-        //    {
-        //        return true;
-        //    }
+        //    //// 不是目标
+        //    //if (id != 8200801 && id != 8200901)
+        //    //{
+        //    //    return true;
+        //    //}
 
         //    Main.ModEntry.Logger.Log("发现目标，进行 ID = " + id + " 的对话");
 

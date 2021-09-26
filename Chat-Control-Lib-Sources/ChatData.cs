@@ -13,6 +13,15 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         public const int NO_TEXT_ID = 2010001;
 
         /// <summary>
+        /// 播放文本框弹出动画的 Shake 值
+        /// </summary>
+        public const int SHAKE = 1;
+        /// <summary>
+        /// 不播放文本框弹出动画的 Shake 值
+        /// </summary>
+        public const int NOT_SHAKE = 0;
+
+        /// <summary>
         /// 这个对话的 id，需要注意这个值在 XmlData 里是没有的
         /// </summary>
         public int id = 0;
@@ -126,37 +135,41 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// <summary>
         /// 用于创建对话内容的构造方法，这个方法会尽可能的将儿子版和女儿版字段使用相同的数值
         /// </summary>
+        /// <param name="chatId">对话的 ID</param>
+        /// <param name="textId">对话的文本的 ID</param>
         /// <param name="text">对话的文本</param>
         /// <param name="player">说这段话的人的名字</param>
-        /// <param name="player_id">说这段话的人的 id</param>
+        /// <param name="playerId">说这段话的人的名字的 id</param>
         /// <param name="playerImage">说这段话的人的图片</param>
         /// <param name="backgroundGraph">背景图</param>
         /// <param name="shake">弹出对话框效果，1 是弹出对话框，0 是不弹出对话框</param>
+        /// <param name="nextId">下一个对话的 id，如果是 0 表示没有下一个对话</param>
         /// <param name="lovingEffect">好感效果，1 是好感度提高，2 是好感度下降，0 是不播放好感变化动画</param>
         /// <param name="taskId">对话完成后添加期望的 id</param>
         /// <param name="effectId">对话完成后产生效果的 id</param>
-        public ChatData(string text, string player, int player_id, string playerImage, string backgroundGraph, int shake, int lovingEffect, int taskId, int effectId)
+        public ChatData(int chatId,int textId,string text, string player, int playerId, string playerImage, string backgroundGraph, int shake, int nextId, int lovingEffect, int taskId, int effectId)
         {
+            this.id = chatId;
+            this.text_id = textId;
+            this.text_girl_id = textId;
+            // type 只发现一个和周年纪念日相关的 7000000，查阅对话数据后发现靠前的对话的 type 是一个很小的数字，靠后的对话则和 id 相同，猜测这是一个早期设计中用于区分的值，后来被 id 替代
+            this.type = chatId;
             this.text = text;
             this.text_girl = text;
             this.player = player;
             this.player_girl = player;
-            this.player_id = player_id;
-            this.player_girl_id = player_id;
+            this.player_id = playerId;
+            this.player_girl_id = playerId;
             this.image = playerImage;
             this.image_girl = playerImage;
             this.graph = backgroundGraph;
             this.shake = shake;
+            this.next_id = nextId;
+            this.next_id_girl = nextId;
             this.loving_effect = lovingEffect;
             this.add_task = taskId;
             this.add_task_girl = taskId;
             this.effect = effectId;
-
-            //type = chatData.GetInt("type");
-            //next_id = chatData.GetInt("next_id");
-            //next_id_girl = chatData.GetInt("next_id_girl");
-            //text_id = chatData.GetInt("text_id");
-            //text_girl_id = chatData.GetInt("text_id");
         }
 
         /// <summary>

@@ -11,6 +11,10 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
     public static class BackgroundGraphs
     {
         /// <summary>
+        /// 没有背景图
+        /// </summary>
+        public const string NONE = "0";
+        /// <summary>
         /// 学校内部的背景图
         /// </summary>
         public static class InSchool
