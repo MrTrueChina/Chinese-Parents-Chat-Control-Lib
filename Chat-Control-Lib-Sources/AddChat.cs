@@ -65,6 +65,9 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 
                 // 生成对话数据
                 ChatData chatData = new ChatData(chatIds[i], chatIds[i], "", chatParam.player.Name, chatParam.player.PlayerId, chatParam.player.Name, chatParam.player.PlayerId, chatParam.player.Image, chatParam.player.Image, chatParam.text, textIds[i], chatParam.text, textIds[i], chatParam.background, 0, 0, 0, 0, 0, 0, 0);
+
+                // 加入列表
+                chatDatas.Add(chatData);
             }
 
             // 连接所有对话并设置弹出对话框特效
