@@ -27,7 +27,12 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             /// 背景
             /// </summary>
             public string background;
-
+            /// <summary>
+            /// 构造
+            /// </summary>
+            /// <param name="player">讲话的人的数据</param>
+            /// <param name="text">对话内容文本</param>
+            /// <param name="background">对话背景图</param>
             public AddChatPrams(CharacterData player, string text, string background)
             {
                 this.player = player;

@@ -32,6 +32,14 @@
             背景
             </summary>
         </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChatPrams.#ctor(MtC.Mod.ChineseParents.ChatControlLib.CharacterData,System.String,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="player">讲话的人的数据</param>
+            <param name="text">对话内容文本</param>
+            <param name="background">对话背景图</param>
+        </member>
         <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChats(System.Collections.Generic.List{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChatPrams},System.Int32,System.Int32,System.Int32)">
             <summary>
             添加长对话
