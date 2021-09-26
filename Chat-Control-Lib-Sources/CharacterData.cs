@@ -13,7 +13,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// <summary>
         /// 人物图片
         /// </summary>
-        public string Graph { get; private set; }
+        public string Image { get; private set; }
         /// <summary>
         /// 人物名称
         /// </summary>
@@ -24,11 +24,15 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         public int PlayerId { get; private set; }
         private CharacterData(string graph, string name, int playerId)
         {
-            Graph = graph;
+            Image = graph;
             Name = name;
             PlayerId = playerId;
         }
 
+        /// <summary>
+        /// 旁白君的数据
+        /// </summary>
+        public static readonly CharacterData NARRATOR = new CharacterData("0", "旁白君", 1022250);
         /// <summary>
         /// 儿子
         /// </summary>
@@ -229,6 +233,56 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             public static readonly CharacterData BAD = new CharacterData("chat_girl9_b", "牧唯", 1030822);
         }
         /// <summary>
+        /// 群演
+        /// </summary>
+        public static class MassActor
+        {
+            /// <summary>
+            /// 有人物图片的
+            /// </summary>
+            public static class HaveImage
+            {
+                /// <summary>
+                /// 同学A
+                /// </summary>
+                public static readonly CharacterData CLASSMATE_A = new CharacterData("chat_longtaojia", "同学A", 1022271);
+                /// <summary>
+                /// 同学甲
+                /// </summary>
+                public static readonly CharacterData CLASSMATE_JIA = new CharacterData("chat_longtaojia", "同学甲", 1030824);
+                /// <summary>
+                /// 同学乙
+                /// </summary>
+                public static readonly CharacterData CLASSMATE_YI = new CharacterData("chat_longtaoyi", "同学乙", 1030825);
+                /// <summary>
+                /// 龙套君A
+                /// </summary>
+                public static readonly CharacterData MASS_ACTOR_A = new CharacterData("chat_longtaoyi", "龙套君甲", 1029877);
+                /// <summary>
+                /// 龙套君B
+                /// </summary>
+                public static readonly CharacterData MASS_ACTOR_B = new CharacterData("chat_longtaojia", "龙套君B", 1030447);
+            }
+            /// <summary>
+            /// 没有人物图片的
+            /// </summary>
+            public static class NotHaveImage
+            {
+                /// <summary>
+                /// 女同学A
+                /// </summary>
+                public static readonly CharacterData GIRL_CLASSMATE_A = new CharacterData("0", "女同学甲", 1027773);
+                /// <summary>
+                /// 男同学B
+                /// </summary>
+                public static readonly CharacterData BOY_CLASSMATE_B = new CharacterData("0", "男同学乙", 1024998);
+                /// <summary>
+                /// 路人A
+                /// </summary>
+                public static readonly CharacterData PASSERBY_A = new CharacterData("0", "路人甲", 1024999);
+            }
+        }
+        /// <summary>
         /// 其他角色
         /// </summary>
         public static class Other
@@ -279,14 +333,6 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             /// 刘偏偏妈妈
             /// </summary>
             public static readonly CharacterData LIU_PIAN_PIAN_MOM = new CharacterData("chat_liumama", "刘妈妈", 1023882);
-            /// <summary>
-            /// 龙套甲
-            /// </summary>
-            public static readonly CharacterData LONG_TAO_JIA = new CharacterData("chat_longtaojia", "龙套君甲", 1029877);
-            /// <summary>
-            /// 龙套乙
-            /// </summary>
-            public static readonly CharacterData LONG_TAO_YI = new CharacterData("chat_longtaoyi", "龙套君B", 1030447);
             /// <summary>
             /// 班主任
             /// </summary>

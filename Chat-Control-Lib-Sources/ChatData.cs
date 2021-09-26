@@ -108,6 +108,10 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
 
         public ChatData() { }
 
+        /// <summary>
+        /// 将 <see cref="XmlData"/> 类型的对话数据转为 <see cref="ChatData"/> 类型的对话数据
+        /// </summary>
+        /// <param name="chatData"></param>
         public ChatData(XmlData chatData)
         {
             name = chatData.GetString("name");
@@ -133,43 +137,57 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         }
 
         /// <summary>
-        /// 用于创建对话内容的构造方法，这个方法会尽可能的将儿子版和女儿版字段使用相同的数值
+        /// 完整的构造
         /// </summary>
-        /// <param name="chatId">对话的 ID</param>
-        /// <param name="textId">对话的文本的 ID</param>
-        /// <param name="text">对话的文本</param>
-        /// <param name="player">说这段话的人的名字</param>
-        /// <param name="playerId">说这段话的人的名字的 id</param>
-        /// <param name="playerImage">说这段话的人的图片</param>
-        /// <param name="backgroundGraph">背景图</param>
-        /// <param name="shake">弹出对话框效果，1 是弹出对话框，0 是不弹出对话框</param>
-        /// <param name="nextId">下一个对话的 id，如果是 0 表示没有下一个对话</param>
-        /// <param name="lovingEffect">好感效果，1 是好感度提高，2 是好感度下降，0 是不播放好感变化动画</param>
-        /// <param name="taskId">对话完成后添加期望的 id</param>
-        /// <param name="effectId">对话完成后产生效果的 id</param>
-        public ChatData(int chatId,int textId,string text, string player, int playerId, string playerImage, string backgroundGraph, int shake, int nextId, int lovingEffect, int taskId, int effectId)
+        /// <param name="id">这个对话的 id</param>
+        /// <param name="type">这个对话的 type，这个值疑似已废弃，仅在为 7000000 时有用</param>
+        /// <param name="name">这个对话的名字，仅供区分用，不会产生实际影响</param>
+        /// <param name="player">儿子版说话的人的名字，这个字段在原逻辑中已弃用</param>
+        /// <param name="player_id">儿子版说话的人的名字的 ID</param>
+        /// <param name="player_girl">女儿版说话的人的名字，这个字段在原逻辑中已弃用</param>
+        /// <param name="player_girl_id">女儿版说话的人的名字的 ID</param>
+        /// <param name="image">儿子版说话的人的图片</param>
+        /// <param name="image_girl">女儿版说话的人的图片</param>
+        /// <param name="text">儿子版的文本，这个字段在原逻辑中已弃用，但在这个 Mod 中是显示的对话文本</param>
+        /// <param name="text_id">儿子版的文本的 ID</param>
+        /// <param name="text_girl">女儿版的文本，这个字段在原逻辑中已弃用，但在这个 Mod 中是显示的对话文本</param>
+        /// <param name="text_girl_id">女儿版的文本的 ID</param>
+        /// <param name="graph">背景图片</param>
+        /// <param name="loving_effect">好感度变化特效，0 是不播放，1 是好感度提高特效，2 是好感度下降特效</param>
+        /// <param name="shake">是否播放对话框弹出动画，1 是播放，0 是不播放</param>
+        /// <param name="next_id">儿子版下一个对话的 ID</param>
+        /// <param name="next_id_girl">女儿版下一个对话的 ID</param>
+        /// <param name="effect">这个对话播放后产生的效果的 ID</param>
+        /// <param name="add_task">儿子版这个对话播放后添加的期望的 ID</param>
+        /// <param name="add_task_girl">女儿版这个对话播放后添加的期望的 ID</param>
+        public ChatData(int id, int type, string name, string player, int player_id,string player_girl,int player_girl_id, string image, string image_girl, string text, int text_id, string text_girl, int text_girl_id,string graph,int loving_effect,int shake, int next_id, int next_id_girl,int effect,int add_task,int add_task_girl)
         {
-            this.id = chatId;
-            this.text_id = textId;
-            this.text_girl_id = textId;
-            // type 只发现一个和周年纪念日相关的 7000000，查阅对话数据后发现靠前的对话的 type 是一个很小的数字，靠后的对话则和 id 相同，猜测这是一个早期设计中用于区分的值，后来被 id 替代
-            this.type = chatId;
-            this.text = text;
-            this.text_girl = text;
+            // 对话本身的数据，对运行基本没有影响
+            this.id = id;
+            this.type = type;
+            this.name = name;
+            // 对话的主要显示内容
             this.player = player;
-            this.player_girl = player;
-            this.player_id = playerId;
-            this.player_girl_id = playerId;
-            this.image = playerImage;
-            this.image_girl = playerImage;
-            this.graph = backgroundGraph;
+            this.player_id = player_id;
+            this.player_girl = player_girl;
+            this.player_girl_id = player_girl_id;
+            this.image = image;
+            this.image_girl = image_girl;
+            this.text = text;
+            this.text_id = text_id;
+            this.text_girl = text_girl;
+            this.text_girl_id = text_girl_id;
+            this.graph = graph;
+            // 对话的特效
+            this.loving_effect = loving_effect;
             this.shake = shake;
-            this.next_id = nextId;
-            this.next_id_girl = nextId;
-            this.loving_effect = lovingEffect;
-            this.add_task = taskId;
-            this.add_task_girl = taskId;
-            this.effect = effectId;
+            // 下一个对话的 id
+            this.next_id = next_id;
+            this.next_id_girl = next_id_girl;
+            // 对话产生的附属效果
+            this.effect = effect;
+            this.add_task = add_task;
+            this.add_task_girl = add_task_girl;
         }
 
         /// <summary>

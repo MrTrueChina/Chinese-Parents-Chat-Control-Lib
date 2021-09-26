@@ -17,6 +17,31 @@
             用于添加对话的参数
             </summary>
         </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChatPrams.player">
+            <summary>
+            讲话的人
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChatPrams.text">
+            <summary>
+            讲话的文本
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChatPrams.backgound">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChats(System.Collections.Generic.List{MtC.Mod.ChineseParents.ChatControlLib.ChatControl.AddChatPrams},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            添加长对话
+            </summary>
+            <param name="chatParams">对话数据</param>
+            <param name="lovingEffect">对话播放完后播放的好感度变化特效，0 是不播放，1 是好感度上升，2 是好感度下降</param>
+            <param name="effect">对话播放完后添加的效果的 ID，0 表示无效果</param>
+            <param name="task">对话播放完后添加的期望的 ID，0 表示不添加期望</param>
+            <returns></returns>
+        </member>
         <member name="F:MtC.Mod.ChineseParents.ChatControlLib.ChatControl.beforeModify">
             <summary>
             优先处理方法列表，这个列表中的方法将会优先于修改对话对【每一条】对话进行处理，参数格式与修改对话的方法一致
@@ -594,22 +619,37 @@
             对话完成后发出 Effect 的 id，这个 Effect 是 effect_data.Effect 方法使用的，而这个方法似乎有加属性、开工作选项等功能
             </summary>
         </member>
-        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatData.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatData.#ctor(XmlData)">
             <summary>
-            用于创建对话内容的构造方法，这个方法会尽可能的将儿子版和女儿版字段使用相同的数值
+            将 <see cref="T:XmlData"/> 类型的对话数据转为 <see cref="T:MtC.Mod.ChineseParents.ChatControlLib.ChatData"/> 类型的对话数据
             </summary>
-            <param name="chatId">对话的 ID</param>
-            <param name="textId">对话的文本的 ID</param>
-            <param name="text">对话的文本</param>
-            <param name="player">说这段话的人的名字</param>
-            <param name="playerId">说这段话的人的名字的 id</param>
-            <param name="playerImage">说这段话的人的图片</param>
-            <param name="backgroundGraph">背景图</param>
-            <param name="shake">弹出对话框效果，1 是弹出对话框，0 是不弹出对话框</param>
-            <param name="nextId">下一个对话的 id，如果是 0 表示没有下一个对话</param>
-            <param name="lovingEffect">好感效果，1 是好感度提高，2 是好感度下降，0 是不播放好感变化动画</param>
-            <param name="taskId">对话完成后添加期望的 id</param>
-            <param name="effectId">对话完成后产生效果的 id</param>
+            <param name="chatData"></param>
+        </member>
+        <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatData.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            完整的构造
+            </summary>
+            <param name="id">这个对话的 id</param>
+            <param name="type">这个对话的 type，这个值疑似已废弃，仅在为 7000000 时有用</param>
+            <param name="name">这个对话的名字，仅供区分用，不会产生实际影响</param>
+            <param name="player">儿子版说话的人的名字，这个字段在原逻辑中已弃用</param>
+            <param name="player_id">儿子版说话的人的名字的 ID</param>
+            <param name="player_girl">女儿版说话的人的名字，这个字段在原逻辑中已弃用</param>
+            <param name="player_girl_id">女儿版说话的人的名字的 ID</param>
+            <param name="image">儿子版说话的人的图片</param>
+            <param name="image_girl">女儿版说话的人的图片</param>
+            <param name="text">儿子版的文本，这个字段在原逻辑中已弃用，但在这个 Mod 中是显示的对话文本</param>
+            <param name="text_id">儿子版的文本的 ID</param>
+            <param name="text_girl">女儿版的文本，这个字段在原逻辑中已弃用，但在这个 Mod 中是显示的对话文本</param>
+            <param name="text_girl_id">女儿版的文本的 ID</param>
+            <param name="graph">背景图片</param>
+            <param name="loving_effect">好感度变化特效，0 是不播放，1 是好感度提高特效，2 是好感度下降特效</param>
+            <param name="shake">是否播放对话框弹出动画，1 是播放，0 是不播放</param>
+            <param name="next_id">儿子版下一个对话的 ID</param>
+            <param name="next_id_girl">女儿版下一个对话的 ID</param>
+            <param name="effect">这个对话播放后产生的效果的 ID</param>
+            <param name="add_task">儿子版这个对话播放后添加的期望的 ID</param>
+            <param name="add_task_girl">女儿版这个对话播放后添加的期望的 ID</param>
         </member>
         <member name="M:MtC.Mod.ChineseParents.ChatControlLib.ChatData.Copy">
             <summary>
@@ -1323,7 +1363,7 @@
             人物数据
             </summary>
         </member>
-        <member name="P:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Graph">
+        <member name="P:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Image">
             <summary>
             人物图片
             </summary>
@@ -1336,6 +1376,11 @@
         <member name="P:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.PlayerId">
             <summary>
             人物对话 id，这个 id 用于获取对话的讲话的人的名字
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.NARRATOR">
+            <summary>
+            旁白君的数据
             </summary>
         </member>
         <member name="T:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Son">
@@ -1558,6 +1603,61 @@
             坏心情数据
             </summary>
         </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor">
+            <summary>
+            群演
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.HaveImage">
+            <summary>
+            有人物图片的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.HaveImage.CLASSMATE_A">
+            <summary>
+            同学A
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.HaveImage.CLASSMATE_JIA">
+            <summary>
+            同学甲
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.HaveImage.CLASSMATE_YI">
+            <summary>
+            同学乙
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.HaveImage.MASS_ACTOR_A">
+            <summary>
+            龙套君A
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.HaveImage.MASS_ACTOR_B">
+            <summary>
+            龙套君B
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.NotHaveImage">
+            <summary>
+            没有人物图片的
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.NotHaveImage.GIRL_CLASSMATE_A">
+            <summary>
+            女同学A
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.NotHaveImage.BOY_CLASSMATE_B">
+            <summary>
+            男同学B
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.MassActor.NotHaveImage.PASSERBY_A">
+            <summary>
+            路人A
+            </summary>
+        </member>
         <member name="T:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Other">
             <summary>
             其他角色
@@ -1616,16 +1716,6 @@
         <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Other.LIU_PIAN_PIAN_MOM">
             <summary>
             刘偏偏妈妈
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Other.LONG_TAO_JIA">
-            <summary>
-            龙套甲
-            </summary>
-        </member>
-        <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Other.LONG_TAO_YI">
-            <summary>
-            龙套乙
             </summary>
         </member>
         <member name="F:MtC.Mod.ChineseParents.ChatControlLib.CharacterData.Other.TEACHER">
