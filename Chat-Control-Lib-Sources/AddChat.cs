@@ -26,7 +26,14 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             /// <summary>
             /// 背景
             /// </summary>
-            public string backgound;
+            public string background;
+
+            public AddChatPrams(CharacterData player, string text, string background)
+            {
+                this.player = player;
+                this.text = text;
+                this.background = background;
+            }
         }
 
         /// <summary>
@@ -52,7 +59,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 AddChatPrams chatParam = chatParams[i];
                 
                 // 生成对话数据
-                ChatData chatData = new ChatData(chatIds[i], chatIds[i], "", chatParam.player.Name, chatParam.player.PlayerId, chatParam.player.Name, chatParam.player.PlayerId, chatParam.player.Image, chatParam.player.Image, chatParam.text, textIds[i], chatParam.text, textIds[i], chatParam.backgound, 0, 0, 0, 0, 0, 0, 0);
+                ChatData chatData = new ChatData(chatIds[i], chatIds[i], "", chatParam.player.Name, chatParam.player.PlayerId, chatParam.player.Name, chatParam.player.PlayerId, chatParam.player.Image, chatParam.player.Image, chatParam.text, textIds[i], chatParam.text, textIds[i], chatParam.background, 0, 0, 0, 0, 0, 0, 0);
             }
 
             // 连接所有对话并设置弹出对话框特效
