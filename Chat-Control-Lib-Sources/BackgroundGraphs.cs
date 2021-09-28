@@ -27,23 +27,23 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 /// <summary>
                 /// 从窗外俯视小学教室（儿子版小学背景之一）
                 /// </summary>
-                public const string LITTLE_SCHOOL_CLASS_ROOM_OUT_OF_WINDOW = "home_bg7";
+                public const string LITTLE_SCHOOL_CLASS_ROOM_OUT_OF_WINDOW = "ui/main_ui/panel/home_bg7";
                 /// <summary>
                 /// 小学教室内部靠窗（儿子版小学背景之一）
                 /// </summary>
-                public const string LITTLE_SCHOOL_CLASS_ROOM = "home_bg7_G2";
+                public const string LITTLE_SCHOOL_CLASS_ROOM = "ui/main_ui/panel/home_bg7_G2";
                 /// <summary>
                 /// 女儿版初中教室内（黄昏那个）
                 /// </summary>
-                public const string GIRL_MIDDLE_SCHOOL_CLASS_ROOM = "girl_homebg10";
+                public const string GIRL_MIDDLE_SCHOOL_CLASS_ROOM = "ui/main_ui/panel/girl_homebg10";
                 /// <summary>
                 /// 广角镜拍摄的挂着国旗的教室（应该是某个背景，但没见过）
                 /// </summary>
-                public const string SCHOOL_CLASS_ROOM_WITH_FLAG = "home_bg10";
+                public const string SCHOOL_CLASS_ROOM_WITH_FLAG = "ui/main_ui/panel/home_bg10";
                 /// <summary>
                 /// 女儿版小学教室内（摄像机对着窗户，女儿后面一个男同学趴头睡那个）
                 /// </summary>
-                public const string GIRL_LITTLE_SCHOOL_CLASS_ROOM = "girl_homebg7";
+                public const string GIRL_LITTLE_SCHOOL_CLASS_ROOM = "ui/main_ui/panel/girl_homebg7";
             }
             /// <summary>
             /// 走廊和楼梯
@@ -57,7 +57,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 /// <summary>
                 /// 女儿版初中走廊（有“初二(5)班”字样
                 /// </summary>
-                public const string GIRL_MIDDLE_SCHOOL_CORRIDOR = "girl_homebg13";
+                public const string GIRL_MIDDLE_SCHOOL_CORRIDOR = "ui/main_ui/panel/girl_homebg13";
                 /// <summary>
                 /// 学校楼梯口（左侧是关着的门，右边是上下楼梯）
                 /// </summary>
@@ -73,17 +73,17 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             public static class Playground
             {
                 /// <summary>
-                /// 操场旁边（儿子版初中背景之一）
+                /// 操场旁边（篮球架后面，儿子版初中背景之一）
                 /// </summary>
-                public const string PLAYGROUND_SIDE_2 = "home_bg13";
+                public const string PLAYGROUND_SIDE_2 = "ui/main_ui/panel/home_bg13";
                 /// <summary>
                 /// 学校操场旁边（苏芳允线最后出现过的操场旁边背景）
                 /// </summary>
                 public const string PLAYGROUND_SIDE = "comdy_playground";
                 /// <summary>
-                /// 体育场旁边停自行车的地方（儿子版初中背景之一）
+                /// 体育场旁边停自行车的地方（黄昏，儿子版初中背景之一）
                 /// </summary>
-                public const string PLAYGROUND_SIDE_3_BICYCLE = "home_bg10_G2";
+                public const string PLAYGROUND_SIDE_3_BICYCLE = "ui/main_ui/panel/home_bg10_G2";
             }
             /// <summary>
             /// 办公室
@@ -117,7 +117,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 /// <summary>
                 /// 男生宿舍（儿子版背景之一）
                 /// </summary>
-                public const string BOY_DORMITORY = "home_bg13_G2";
+                public const string BOY_DORMITORY = "ui/main_ui/panel/home_bg13_G2";
             }
         }
         /// <summary>
@@ -179,7 +179,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
                 /// <summary>
                 /// 女儿版高中卧室
                 /// </summary>
-                public const string GIRL_HIGH_SCHOOL_BEDROOM = "girl_homebg16";
+                public const string GIRL_HIGH_SCHOOL_BEDROOM = "ui/main_ui/panel/girl_homebg16";
             }
             /// <summary>
             /// 幼儿园背景
@@ -187,17 +187,17 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             public static class Kindergarten
             {
                 /// <summary>
-                /// 幼儿园（幼儿园背景之一）
+                /// 幼儿园（墙上贴一个长颈鹿，有弯曲的门，儿子版幼儿园背景之一）
                 /// </summary>
-                public const string KIDERGARTEN = "home_bg3_G2";
+                public const string KIDERGARTEN = "ui/main_ui/panel/home_bg3_G2";
                 /// <summary>
-                /// 幼儿园（幼儿园背景之一）
+                /// 幼儿园（有个小篮球框、一个摇摇木马玩具，墙上画一个大白象，儿子版幼儿园背景之一）
                 /// </summary>
-                public const string KIDERGARTEN_2 = "home_bg3";
+                public const string KIDERGARTEN_2 = "ui/main_ui/panel/home_bg3";
                 /// <summary>
-                /// 幼儿园（幼儿园背景之一）
+                /// 幼儿园（两个小桌子，房间很宽敞，女儿版幼儿园背景）
                 /// </summary>
-                public const string KIDERGARTEN_3 = "girl_homebg3";
+                public const string KIDERGARTEN_3 = "ui/main_ui/panel/girl_homebg3";
             }
             /// <summary>
             /// 综艺节目或演唱会
@@ -282,19 +282,19 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             /// <summary>
             /// 结局时录取通知书的背景桌子
             /// </summary>
-            public const string DESK = "end_bg";
+            public const string DESK = "ui/end/end_bg";
             /// <summary>
             /// 心理阴影漫后的坏结局背景
             /// </summary>
-            public const string BAD_END = "bad_end_bg";
+            public const string BAD_END = "bg/bad_end_bg";
             /// <summary>
             /// 上下黑条中间灰色的背景（相亲进度条的背景）
             /// </summary>
-            public const string BLACK_GRAY_BLACK = "dating_bg";
+            public const string BLACK_GRAY_BLACK = "ui/end/dating_bg";
             /// <summary>
             /// 开场动画的睁眼背景（朦胧的光晕）
             /// </summary>
-            public const string OPEN_EYE = "transition_birth_bg";
+            public const string OPEN_EYE = "ui/transition/transition_birth_bg";
         }
     }
 }

@@ -56,7 +56,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
             /// <summary>
             /// 坏心情数据
             /// </summary>
-            public static readonly CharacterData BAD = new CharacterData("chat_daughter", "我", 1023892);
+            public static readonly CharacterData BAD = new CharacterData("chat_daughter_b", "我", 1023892);
             /// <summary>
             /// 女儿当妈之后的数据
             /// </summary>
