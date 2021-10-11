@@ -24,3 +24,12 @@ public static void ModifyChat(int chatId, Func<ChatData, ChatData, ChatData> mod
 public static void RemoveModifyChat(int chatId, Func<ChatData, ChatData, ChatData> modify);
 取消对指定的 ID 的对话进行指定的修改的功能。
 ```
+
+### Class：ChatIds
+这个类记录了部分对话的 ID。
+
+### Class：CharacterData
+这个类记录了部分对话中出现的人物的数据，包括 ID、名称、立绘。
+
+### Class：BackgroundGraphs
+这个类记录了部分可以用作对话背景的图片。
