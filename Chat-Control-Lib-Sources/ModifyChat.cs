@@ -100,7 +100,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 申请一定数量的对话 id，这个对话 id 可以用来添加修改对话，如果不从这个方法申请 id 则可能由于 id 冲突发生对话修改错误
         /// </summary>
         /// <param name="number"></param>
-        public static List<int> ApplyChatIds(int number)
+        private static List<int> ApplyChatIds(int number)
         {
             List<int> chatIds = new List<int>();
 
@@ -117,7 +117,7 @@ namespace MtC.Mod.ChineseParents.ChatControlLib
         /// 申请一定数量的文本 id，这个文本 id 可以用来添加修改对话，如果不从这个方法申请 id 则可能由于 id 冲突发生对话修改错误
         /// </summary>
         /// <param name="number"></param>
-        public static List<int> ApplyTextIds(int number)
+        private static List<int> ApplyTextIds(int number)
         {
             List<int> textIds = new List<int>();
 
